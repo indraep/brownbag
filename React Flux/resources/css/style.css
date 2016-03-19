@@ -1,0 +1,147 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #000000;
+    margin:0;
+}
+
+#container{
+    display: table;
+    height: 100vh;
+    margin:0 auto;
+}
+#content{
+    width:50%;
+    margin:0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#content > div{
+    background: #fff;
+    padding: 1em;
+    max-width: 350px;
+    margin: 0 auto;
+}
+#list-section{
+        max-height: 300px;
+    overflow-y: scroll;
+}
+h3{
+    text-align: center;
+    color: #8FD3F3;
+
+}
+ul{
+    list-style-type: none;
+    padding:0;
+}
+li{
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+li span.level{
+    float:right;
+    font-size: 1.3em;
+}
+li.done{
+    color: #aaa;
+    position: relative;
+}
+li.done span{
+    color: #ccc;
+}
+li.done:before{
+    border-top: 1px solid #ccc;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: 1;
+}
+.high{
+    color:#EB5A3F   
+}
+
+.medium{
+    color:#F2A74C;
+}
+
+.low{
+    color:#A3D035;
+}
+button{
+    cursor: pointer;
+    outline: 0;
+}
+button.is-done{
+    border: 2px solid #8FD3F3;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    margin-right: 0.5em;
+    font-size: 0.8em;
+    padding: 0;
+    color:#fff;
+}
+button.is-done:hover,button.is-done:active,button.is-done:focus{
+    background: #8FD3F3;
+}
+#add-section{
+    position: relative;
+    background: #EFEFEF !important;
+    display: flex;
+}
+select{
+    display: block;
+}
+input{
+    width: 60%;
+    padding: 0.5em;
+    float: left;
+    margin-right: 0.5em;
+    outline: 0;
+    font-size: inherit;
+}
+
+button#add{
+    background: #8FD3F3;
+    border: none;
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -o-border-radius: 40px;
+    border-radius: 40px;
+    color: #fff;
+    line-height: 0;
+    padding: 0;
+    position: absolute;
+    right: -0.5em;
+    bottom: -0.5em;
+}
+
+button#add:hover,button#add:active,button#add:focus{
+    color: #8FD3F3;
+    background: #fff;
+    border:2px solid #8FD3F3;
+}
+footer{
+    background: #FDEE6F;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
