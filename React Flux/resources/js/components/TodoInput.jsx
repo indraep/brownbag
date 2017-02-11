@@ -30,7 +30,7 @@ var TodoInput = React.createClass({
 	},
 
 	render: function() {
-		var priorityOptions = Object.keys(_priorities).map(function(id){
+		var priorityOptions = Object.keys(_priorities).map(function(id) {
 			return (
 				<option key={id} value={_priorities[id]}>
 					{_priorities[id] + " (" + getPriority(_priorities[id]) + ")"}
@@ -39,15 +39,15 @@ var TodoInput = React.createClass({
 		});
 
 		return (
-			<div id="add-section">
+			<div id='add-section'>
 				<input onChange={this.handleContentChange} value={this.state.content} 
-					type="text" placeholder="Tambah to do baru"></input>
+					type='text' placeholder='Tambah to do baru'></input>
 				
 				<select onChange={this.handlePriorityChange} value={this.state.priority}>
 					{priorityOptions}
 				</select>
 				
-				<button onClick={this.handleAddTodo} id="add">&#43;</button>
+				<button onClick={this.handleAddTodo} id='add'>&#43;</button>
 			</div>
 		);
 	}

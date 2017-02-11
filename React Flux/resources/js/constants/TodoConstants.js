@@ -5,6 +5,6 @@ function construct(value) {
 }
 
 module.exports = {
-	INPUT_TODO_ITEM : construct("INPUT_TODO_ITEM"),
-	MARK_AS_DONE : construct("MARK_AS_DONE")
+	INPUT_TODO_ITEM: construct("INPUT_TODO_ITEM"),
+	MARK_AS_DONE: construct("MARK_AS_DONE")
 };

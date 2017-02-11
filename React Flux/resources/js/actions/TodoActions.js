@@ -2,7 +2,7 @@ var ActionsHelper = require('./ActionsHelper');
 var TodoConstants = require('../constants/TodoConstants');
 
 var TodoActions = {
-	addTodo : function(priority, content) {
+	addTodo: function(priority, content) {
 		var data = {
 			priority: priority,
 			content: content
@@ -11,7 +11,7 @@ var TodoActions = {
 		ActionsHelper.dispatch(TodoConstants.INPUT_TODO_ITEM, data);
 	},
 
-	markAsDone : function(content) {
+	markAsDone: function(content) {
 		var data = {
 			content: content
 		}

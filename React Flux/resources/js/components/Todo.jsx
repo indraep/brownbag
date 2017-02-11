@@ -30,10 +30,11 @@ var Todo = React.createClass({
 
 	render: function() {
 		return (
-			<div id="content">
-				<div id="list-section">
+			<div id='content'>
+				<div id='list-section'>
 					<Header title={this.state.title} />
-					<TodoList markAsDone={this.markAsDone} todos={this.state.todos} />
+					<TodoList markAsDone={this.markAsDone} 
+						todos={this.state.todos} />
 				</div>
 				<TodoInput addTodo={this.addTodo} />
 			</div>

@@ -14,7 +14,7 @@ var TodoItem = React.createClass({
 
 		if (todo.done) {
 			return (
-				<li className="done">
+				<li className='done'>
 					{todo.content}
 					<span className={"level " + todo.priority}>
 						{getPriority(todo.priority)}
@@ -24,7 +24,8 @@ var TodoItem = React.createClass({
 		} else {
 			return (
 				<li>
-					<button className="is-done" onClick={this.handleMarkAsDone.bind(this, todo.content)}>
+					<button className='is-done' onClick=
+						{this.handleMarkAsDone.bind(this, todo.content)}>
 						&#10004;
 					</button>
 					
