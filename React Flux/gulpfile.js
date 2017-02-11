@@ -1,4 +1,6 @@
 var gulp = require('gulp'), 
+	debug = require('gulp-debug'),
+	eslint = require('gulp-eslint'),
 	browserify = require('browserify'),
 	babelify = require('babelify'),
 	sass = require('gulp-sass'),
@@ -8,6 +10,15 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	package = require('./package.json');
 
+gulp.task('lint', function() {
+	gulp.src(
+		['./resources/js/**/*.js', 
+		'./resources/js/**/*.jsx',
+		'!./resources/js/bundle.js'])
+		.pipe(eslint())
+		.pipe(eslint.format())
+		.pipe(eslint.failAfterError());
+});
 
 gulp.task('js', function() {
 	return browserify(package.paths.appjsx)
@@ -16,6 +27,7 @@ gulp.task('js', function() {
 	.pipe(source(package.dest.app))
 	.pipe(gulp.dest(package.dest.dist));
 });
+
 gulp.task('js:min', function() {
 	return browserify(package.paths.appjsx)
 	.transform(babelify, {presets: ['react']})

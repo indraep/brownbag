@@ -1,0 +1,24 @@
+{
+	"parserOptions": {
+	    "ecmaFeatures": {
+	        "jsx": true,
+	        "modules": true
+	    }
+	},
+	"plugins": ["react"],
+	"globals": {
+		"require": true,
+		"module": true,
+		"React": true,
+		"ReactDOM": true,
+		"window": true
+	},
+	"rules": {
+    	"no-unused-vars": 2,
+    	"no-undef": 2,
+
+    	/** react */
+    	"react/jsx-uses-vars": "error",
+    	"react/jsx-no-undef": "error"
+	}
+}

@@ -11,7 +11,6 @@ var TodoItem = React.createClass({
 
 	render: function() {
 		var todo = this.props.todo;
-		var View;
 
 		if (todo.done) {
 			return (

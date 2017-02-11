@@ -22,10 +22,10 @@ var TodoInput = React.createClass({
 		this.setState({priority: e.target.value, content: this.state.content});	
 	},
 
-	handleAddTodo: function(e) {
+	handleAddTodo: function() {
 		if (this.state.content) {
 			TodoActions.addTodo(this.state.priority, this.state.content);
-			this.state(getInitialState());
+			this.state(this.getInitialState());
 		}
 	},
 

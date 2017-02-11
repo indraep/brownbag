@@ -12,7 +12,7 @@ var TodoActions = {
 	},
 
 	markAsDone : function(content) {
-		data = {
+		var data = {
 			content: content
 		}
 

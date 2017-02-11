@@ -5,5 +5,6 @@ var Todo = require('./components/Todo.jsx');
 
 ReactDOM.render (
 	<Todo />,
+	/* global document */
 	document.getElementById('container')
 );
