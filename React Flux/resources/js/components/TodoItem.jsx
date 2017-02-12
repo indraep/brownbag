@@ -1,3 +1,5 @@
+var React = require('react');
+
 var TodoActions = require('../actions/TodoActions');
 
 function getPriority(level) {
