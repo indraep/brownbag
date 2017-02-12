@@ -8,9 +8,7 @@ var TodoConstants = require('../constants/TodoConstants');
 var _title = "Bli Todo List";
 var _todos = [
 	{
-		priority: "high",
-		content: "Todo 1",
-		done: false
+		priority: "high", content: "Todo 1", done: false
 	},
 	{
 		priority: "medium",
@@ -25,7 +23,9 @@ var _todos = [
 ];
 
 function addTodo(priority, content) {
-	_todos.push({priority: priority, content: content, done: false});
+	_todos.push({
+		priority: priority, content: content, done: false
+	});
 }
 
 function markAsDone(content) {
@@ -69,13 +69,13 @@ AppDispatcher.register(function(payload) {
 		case TodoConstants.MARK_AS_DONE :
 			markAsDone(action.data.content);
 			break;
-			
+
 		default :
 			return true;
 	}
 
 	TodoStore.emitChange();
-	
+
 	return true;
 });
 

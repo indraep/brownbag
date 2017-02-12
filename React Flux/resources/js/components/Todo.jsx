@@ -33,7 +33,7 @@ var Todo = React.createClass({
 			<div id='content'>
 				<div id='list-section'>
 					<Header title={this.state.title} />
-					<TodoList markAsDone={this.markAsDone} 
+					<TodoList markAsDone={this.markAsDone}
 						todos={this.state.todos} />
 				</div>
 				<TodoInput addTodo={this.addTodo} />

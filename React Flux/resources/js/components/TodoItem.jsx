@@ -28,9 +28,9 @@ var TodoItem = React.createClass({
 						{this.handleMarkAsDone.bind(this, todo.content)}>
 						&#10004;
 					</button>
-					
+
 					{todo.content}
-					
+
 					<span className={"level " + todo.priority} >
 						{getPriority(todo.priority)}
 					</span>

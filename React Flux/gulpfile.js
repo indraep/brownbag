@@ -8,7 +8,13 @@ var gulp = require('gulp'),
 	buffer = require('vinyl-buffer'),
 	source = require('vinyl-source-stream'),
 	rename = require('gulp-rename'),
+	gulpIf = require('gulp-if'),
 	package = require('./package.json');
+
+function isFixed(file) {
+	// Has ESLint fixed the file contents?
+	return file.eslint != null && file.eslint.fixed;
+}
 
 gulp.task('lint', function() {
 	gulp.src(
@@ -17,6 +23,17 @@ gulp.task('lint', function() {
 		'!./resources/js/bundle.js'])
 		.pipe(eslint())
 		.pipe(eslint.format())
+		.pipe(eslint.failAfterError());
+});
+
+gulp.task('lint-fix', function() {
+	gulp.src(
+		['./resources/js/**/*.js', 
+		'./resources/js/**/*.jsx',
+		'!./resources/js/bundle.js'])
+		.pipe(eslint({fix: true}))
+		.pipe(eslint.format())
+		.pipe(gulpIf(isFixed, gulp.dest('./resources/js')))
 		.pipe(eslint.failAfterError());
 });
 

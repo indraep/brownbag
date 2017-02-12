@@ -12,7 +12,7 @@ var TodoList = React.createClass({
 
 		return (
 			<ul>
-				{list}		
+				{list}
 			</ul>
 		);
 	}

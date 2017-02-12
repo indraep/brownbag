@@ -6,17 +6,15 @@ var TodoActions = {
 		var data = {
 			priority: priority,
 			content: content
-		}
+		};
 
 		ActionsHelper.dispatch(TodoConstants.INPUT_TODO_ITEM, data);
 	},
 
 	markAsDone: function(content) {
-		var data = {
-			content: content
-		}
+		var data = { content: content };
 
-		ActionsHelper.dispatch(TodoConstants.MARK_AS_DONE, data);	
+		ActionsHelper.dispatch(TodoConstants.MARK_AS_DONE, data);
 	}
 }
 

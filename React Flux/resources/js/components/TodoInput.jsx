@@ -15,11 +15,15 @@ var TodoInput = React.createClass({
 	},
 
 	handleContentChange: function(e) {
-		this.setState({priority: this.state.priority, content: e.target.value});
+		this.setState({
+			priority: this.state.priority, content: e.target.value
+		});
 	},
 
 	handlePriorityChange: function(e) {
-		this.setState({priority: e.target.value, content: this.state.content});	
+		this.setState({
+			priority: e.target.value, content: this.state.content
+		});
 	},
 
 	handleAddTodo: function() {
@@ -40,13 +44,13 @@ var TodoInput = React.createClass({
 
 		return (
 			<div id='add-section'>
-				<input onChange={this.handleContentChange} value={this.state.content} 
+				<input onChange={this.handleContentChange} value={this.state.content}
 					type='text' placeholder='Tambah to do baru'></input>
-				
+
 				<select onChange={this.handlePriorityChange} value={this.state.priority}>
 					{priorityOptions}
 				</select>
-				
+
 				<button onClick={this.handleAddTodo} id='add'>&#43;</button>
 			</div>
 		);
